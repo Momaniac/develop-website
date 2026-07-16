@@ -3,16 +3,11 @@
 import React from "react";
 import {
   ArrowRight,
-  Rocket,
-  BookOpen,
   Award,
-  Users,
   CheckCircle2,
   ChevronDown,
   Briefcase,
-  GraduationCap,
   Target,
-  Sparkles,
   Brain,
   Code2,
   Cpu,

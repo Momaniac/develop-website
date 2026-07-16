@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { TrendingUp, Users, Award, Building2, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { GradientBlob, SectionTitle, GlassCard, StatCard, Button } from "../components/ui";
+import { SectionTitle, GlassCard, StatCard, Button } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 import { MoonoPeek } from "../components/Moono";
 

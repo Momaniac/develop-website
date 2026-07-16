@@ -20,7 +20,7 @@ import {
   Video,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { GradientBlob, SectionTitle, Button, IconBox, GlassCard, StatCard } from "../components/ui";
+import { GradientBlob, SectionTitle, Button, IconBox, GlassCard } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 
 const fadeUp = {

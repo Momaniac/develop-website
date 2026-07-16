@@ -7,7 +7,6 @@ import {
   Clock,
   Sparkles,
   BellRing,
-  CheckCircle2,
   Users,
   Database,
   Brain,

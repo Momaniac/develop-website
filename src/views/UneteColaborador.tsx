@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Users, Briefcase, GraduationCap, Upload, Heart, CheckCircle2, MapPin, Clock } from "lucide-react";
+import { ArrowRight, Users, Briefcase, GraduationCap, Upload, Heart, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { GradientBlob, SectionTitle, GlassCard, Button, IconBox } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";

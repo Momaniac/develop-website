@@ -3,7 +3,7 @@
 import React from "react";
 import { ArrowRight, GraduationCap, Zap, BookOpen, Briefcase, CheckCircle2, Award, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
-import { GradientBlob, SectionTitle, GlassCard, StatCard, Button, IconBox, Pill } from "../components/ui";
+import { GradientBlob, SectionTitle, GlassCard, Button, IconBox, Pill } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 
 const fadeUp = {

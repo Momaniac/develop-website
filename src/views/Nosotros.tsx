@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { Heart, Award, Users, Globe, Handshake, BookOpen, TrendingUp } from "lucide-react";
+import { Heart, Award, Users, Globe } from "lucide-react";
 import { motion } from "framer-motion";
-import { GradientBlob, SectionTitle, GlassCard, StatCard, IconBox } from "../components/ui";
+import { SectionTitle, GlassCard, StatCard, IconBox } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 import { MoonoPeek } from "../components/Moono";
 
@@ -102,6 +102,7 @@ export default function Nosotros() {
                 key={`${logo.name}-${i}`}
                 className="flex flex-shrink-0 items-center justify-center px-8 sm:px-12"
               >
+                {/* eslint-disable-next-line @next/next/no-img-element -- logos de aliados decorativos, pequeños, en carrusel animado */}
                 <img
                   src={logo.src}
                   alt={logo.name}

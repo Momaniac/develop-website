@@ -66,7 +66,6 @@ export default function OpengraphImage() {
 
         {/* Middle: logo + tagline */}
         <div style={{ display: "flex", flexDirection: "column", gap: 34 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={logoSrc} width={560} height={167} alt="Develop" style={{ objectFit: "contain" }} />
           <div
             style={{

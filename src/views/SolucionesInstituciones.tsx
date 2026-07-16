@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, BookOpen, Users, Target, CheckCircle2, GraduationCap, Award, Monitor } from "lucide-react";
+import { ArrowRight, BookOpen, Users, CheckCircle2, Monitor } from "lucide-react";
 import { motion } from "framer-motion";
-import { GradientBlob, SectionTitle, GlassCard, StatCard, Button, IconBox } from "../components/ui";
+import { SectionTitle, GlassCard, StatCard, Button, IconBox } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 
 const fadeUp = {

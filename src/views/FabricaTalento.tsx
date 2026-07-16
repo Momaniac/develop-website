@@ -5,20 +5,16 @@ import {
   ArrowRight,
   Users,
   Target,
-  CheckCircle2,
-  Award,
   Search,
-  Briefcase,
   Clock,
   BarChart3,
-  Brain,
   GraduationCap,
   Building2,
   Sparkles,
   Zap,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { GradientBlob, SectionTitle, Button, IconBox, GlassCard, StatCard } from "../components/ui";
+import { SectionTitle, Button, IconBox, GlassCard, StatCard } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 
 const fadeUp = {

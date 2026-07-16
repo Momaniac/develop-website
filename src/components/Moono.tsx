@@ -1,4 +1,6 @@
 "use client";
+/* eslint-disable @next/next/no-img-element -- Moono renderiza mascotas decorativas
+   (aria-hidden), con src dinámico y ya lazy/async; next/image no aporta aquí. */
 
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -166,7 +168,7 @@ export function MoonoDash({
       to: dir === 1 ? w + off : -off,
       delay: 1.2 + Math.random() * 3,
     });
-  }, [reduced, chance]);
+  }, [reduced, chance, size]);
 
   if (!cfg) return null;
 

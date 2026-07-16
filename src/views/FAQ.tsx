@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { ArrowRight, Plus, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SectionTitle, Button } from "../components/ui";
+import { Button } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 import { faqCategories } from "./faqData";
 

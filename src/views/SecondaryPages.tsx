@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, GraduationCap, BookOpen, Landmark, Zap, Target, Users, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import { GradientBlob, SectionTitle, GlassCard, Button, IconBox } from "../components/ui";
+import { SectionTitle, GlassCard, Button, IconBox } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 
 const fadeUp = {

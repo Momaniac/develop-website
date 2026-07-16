@@ -2,9 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Search, Filter, ShieldCheck, Users, CheckCircle2, Briefcase } from "lucide-react";
+import { ArrowRight, ShieldCheck, CheckCircle2, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
-import { GradientBlob, SectionTitle, GlassCard, Button, IconBox, Pill } from "../components/ui";
+import { GradientBlob, SectionTitle, GlassCard, Button } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
 import { useFormSubmit } from "../lib/useFormSubmit";
 import { Honeypot, SubmitSuccessModal, SubmitErrorNote } from "../components/FormFeedback";
