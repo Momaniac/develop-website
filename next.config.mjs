@@ -2,10 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  eslint: {
-    // No usamos config de ESLint en el proyecto todavía; no bloquear el build.
-    ignoreDuringBuilds: true,
-  },
   async headers() {
     return [
       {

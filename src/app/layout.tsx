@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/src/components/Layout";
 import BellaChat from "@/src/components/BellaChat";
 import { MoonoDashLayer } from "@/src/components/Moono";
+import { jsonLdScript } from "@/src/lib/jsonLd";
+
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 const SITE_URL = "https://www.develop.com.mx";
 
@@ -76,11 +80,11 @@ const organizationSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className={inter.variable}>
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdScript(organizationSchema) }}
         />
         <div className="flex min-h-screen flex-col">
           <Header />

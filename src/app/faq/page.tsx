@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import FAQ from "@/src/views/FAQ";
 import { faqSchemaItems } from "@/src/views/faqData";
+import { jsonLdScript } from "@/src/lib/jsonLd";
 
 export const metadata: Metadata = {
   title: "Preguntas frecuentes",
@@ -34,7 +35,7 @@ export default function Page() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(faqSchema) }}
       />
       <FAQ />
     </>

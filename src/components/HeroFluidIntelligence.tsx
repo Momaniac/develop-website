@@ -160,11 +160,18 @@ export default function HeroFluidIntelligence({ className = "" }: Props) {
     let running = true;
     let frameId = 0;
 
-    const renderer = new THREE.WebGLRenderer({
-      alpha: true,
-      antialias: true,
-      powerPreference: "high-performance",
-    });
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true,
+        powerPreference: "high-performance",
+      });
+    } catch {
+      // Sin soporte WebGL (GPU bloqueada, headless, gama baja): no montamos nada
+      // y dejamos el fondo CSS del hero (hero-dark). La página nunca se rompe.
+      return;
+    }
     renderer.setClearColor(0x07052e, 0);
     renderer.domElement.className = "block h-full w-full";
     wrapper.appendChild(renderer.domElement);

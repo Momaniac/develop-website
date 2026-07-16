@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight, Users, Briefcase, GraduationCap, Upload, Heart, CheckCircle2, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { GradientBlob, SectionTitle, GlassCard, Button, IconBox } from "../components/ui";
@@ -239,6 +240,13 @@ export default function UneteColaborador() {
               {status === "submitting" ? "Enviando..." : <>Postúlate como talento externo <ArrowRight size={16} /></>}
             </Button>
             <SubmitErrorNote show={status === "error"} />
+            <p className="text-center text-xs text-white/40">
+              Al enviar, aceptas nuestra{" "}
+              <Link href="/privacidad" className="underline transition hover:text-white/70">
+                política de privacidad
+              </Link>
+              .
+            </p>
           </motion.form>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, GraduationCap, BookOpen, Landmark, Zap, Target, Users } from "lucide-react";
+import { ArrowRight, GraduationCap, BookOpen, Landmark, Zap, Target, Users, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { GradientBlob, SectionTitle, GlassCard, Button, IconBox } from "../components/ui";
 import HeroStaticIntelligence from "../components/HeroStaticIntelligence";
@@ -20,7 +20,7 @@ const solutionsData: Record<string, {
   title: string;
   highlight: string;
   desc: string;
-  features: { icon: any; title: string; desc: string }[];
+  features: { icon: LucideIcon; title: string; desc: string }[];
 }> = {
   estudiantes: {
     kicker: "Soluciones · Estudiantes y Profesionales",

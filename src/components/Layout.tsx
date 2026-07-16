@@ -40,10 +40,10 @@ const navLinks = [
 
 function NavDropdown({
   label,
-  children,
+  items,
 }: {
   label: string;
-  children: { label: string; href: string }[];
+  items: { label: string; href: string }[];
 }) {
   const [open, setOpen] = useState(false);
   return (
@@ -67,7 +67,7 @@ function NavDropdown({
             transition={{ duration: 0.15 }}
             className="absolute left-0 top-full z-50 mt-2 w-56 rounded-2xl border border-black/[0.06] bg-white p-2 shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
           >
-            {children.map((child) => (
+            {items.map((child) => (
               <Link
                 key={child.href}
                 href={child.href}
@@ -103,7 +103,7 @@ export function Header() {
         <nav className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link) =>
             link.children ? (
-              <NavDropdown key={link.label} label={link.label} children={link.children} />
+              <NavDropdown key={link.label} label={link.label} items={link.children} />
             ) : (
               <Link
                 key={link.href}
@@ -130,6 +130,9 @@ export function Header() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav"
           className="rounded-xl border border-black/10 bg-white p-2 lg:hidden"
         >
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -146,7 +149,7 @@ export function Header() {
             transition={{ duration: 0.25 }}
             className="overflow-hidden border-t border-black/[0.04] bg-white lg:hidden"
           >
-            <nav className="flex flex-col gap-1 px-5 py-4">
+            <nav id="mobile-nav" className="flex flex-col gap-1 px-5 py-4">
               {navLinks.map((link) => (
                 <React.Fragment key={link.label}>
                   {link.children ? (
@@ -286,6 +289,13 @@ export function Footer() {
             </div>
             <div className="mt-1 text-sm text-white/50">
               Sin spam. Solo inspiración y oportunidades.
+            </div>
+            <div className="mt-1 text-xs text-white/35">
+              Al suscribirte aceptas nuestra{" "}
+              <Link href="/privacidad" className="underline transition hover:text-white/60">
+                política de privacidad
+              </Link>
+              .
             </div>
           </div>
           <form onSubmit={handleSubmit} className="mt-4 flex gap-2 sm:mt-0">
