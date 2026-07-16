@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight, Mail, MapPin, Phone, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -92,9 +93,12 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <img
+          <Image
             src="/logos/logo-develop.png"
             alt="Develop Talent & Technology"
+            width={120}
+            height={36}
+            priority
             className="h-9 w-auto object-contain"
           />
         </Link>
@@ -234,9 +238,11 @@ export function Footer() {
           {/* Brand Column */}
           <div>
             <Link href="/" className="inline-block">
-              <img
+              <Image
                 src="/logos/logo-develop-bco.png"
                 alt="Develop Talent & Technology"
+                width={134}
+                height={40}
                 className="h-10 w-auto object-contain"
               />
             </Link>

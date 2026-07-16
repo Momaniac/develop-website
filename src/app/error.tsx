@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Home, RotateCcw } from "lucide-react";
 
 /**
@@ -24,9 +25,11 @@ export default function Error({
     <section className="hero-dark flex min-h-[calc(100vh-72px)] items-center py-16">
       <div className="relative z-10 mx-auto max-w-2xl px-5 text-center sm:px-8">
         <Link href="/" className="inline-block">
-          <img
+          <Image
             src="/logos/logo-develop-bco.png"
             alt="Develop Talent & Technology"
+            width={121}
+            height={36}
             className="mx-auto h-9 w-auto object-contain"
           />
         </Link>

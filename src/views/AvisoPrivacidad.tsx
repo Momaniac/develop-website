@@ -133,6 +133,14 @@ export default function AvisoPrivacidad() {
                 Grow y MIA.
               </p>
               <p>
+                Asimismo, para operar este sitio web utilizamos proveedores tecnológicos que actúan como
+                encargados del tratamiento y que pueden alojar o procesar información fuera de México:{" "}
+                <strong>FormSubmit</strong> (procesamiento del envío de los formularios del sitio) y{" "}
+                <strong>OpenAI</strong> (que da servicio a nuestra asistente virtual <em>BellA</em>). Estos
+                proveedores tratan los datos únicamente para prestar dichos servicios, conforme a sus propias
+                políticas de privacidad y a las instrucciones de Develop.
+              </p>
+              <p>
                 Si no manifiestas tu oposición por los medios señalados en este aviso, se entenderá que otorgas tu
                 consentimiento para dichas transferencias. Develop se compromete a que la información transferida sea
                 tratada de forma responsable y confidencial, y exclusivamente por quienes requieran conocerla.

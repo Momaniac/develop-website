@@ -12,6 +12,9 @@
   --color-hero-base: #07052e;
   --color-accent-glow: #a78bfa;
   --color-accent-pink: #f472b6;
+  /* Semánticos de marca (contraste AA sobre fondos claros, ≥4.5:1). */
+  --color-success: #15803d;
+  --color-danger: #b91c1c;
 }
 
 :root {

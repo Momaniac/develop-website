@@ -102,7 +102,7 @@ export default function EncuentraTalento() {
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-develop-blue/[0.07]">
                       <Briefcase size={18} className="text-develop-blue" />
                     </div>
-                    <span className="rounded-full bg-green-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-green-600">
+                    <span className="rounded-full bg-success/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-success">
                       Disponible
                     </span>
                   </div>

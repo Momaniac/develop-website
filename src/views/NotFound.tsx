@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Home, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui";
@@ -75,9 +76,11 @@ export default function NotFound() {
           transition={{ duration: 0.5 }}
         >
           <Link href="/" className="inline-block">
-            <img
+            <Image
               src="/logos/logo-develop-bco.png"
               alt="Develop Talent & Technology"
+              width={121}
+              height={36}
               className="mx-auto h-9 w-auto object-contain"
             />
           </Link>

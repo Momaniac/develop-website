@@ -208,8 +208,8 @@ export default function CursosCertificacion() {
                         <span className="text-xs font-medium text-text-muted">Partner: {cat.partner}</span>
                       </div>
                     </div>
-                    <span className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-red-100 bg-red-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-red-500">
-                      <span className="h-1.5 w-1.5 rounded-full bg-red-500" /> Agotado
+                    <span className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-danger/20 bg-danger/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-danger">
+                      <span className="h-1.5 w-1.5 rounded-full bg-danger" /> Agotado
                     </span>
                   </div>
                   <ul className="mt-6 space-y-3">
