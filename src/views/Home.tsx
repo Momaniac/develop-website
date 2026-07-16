@@ -47,9 +47,11 @@ export default function HomePage() {
                 </Pill>
               </motion.div>
 
+              {/* El H1 es el elemento LCP: se pinta ya (opacity 1), solo desliza — no espera al fade. */}
               <motion.h1
-                {...fadeUp}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                initial={{ y: 20 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className="mt-8 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-[4.2rem] xl:leading-[1.05]"
               >
                 Formamos a los arquitectos de la{" "}
