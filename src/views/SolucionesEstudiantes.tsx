@@ -254,16 +254,17 @@ export default function SolucionesEstudiantes() {
           >
             <div className="text-5xl font-serif text-develop-plum leading-none">"</div>
             <blockquote className="mt-4 text-xl font-medium leading-9 text-text-primary sm:text-2xl">
-              El programa //TODO Academy fue el punto de inflexión de mi carrera. Pasé de no tener experiencia
-              a trabajar en una empresa multinacional en solo 8 meses.
+              Gracias a esos conocimientos tuve la oportunidad de viajar al extranjero a hacer mis residencias.
+              Todas las herramientas que ejercí me ayudaron a aplicar lo aprendido y, posteriormente, también
+              tuve la oportunidad de ser instructor.
             </blockquote>
             <figcaption className="mt-8 flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-develop-blue/[0.07] text-sm font-bold text-develop-blue">
-                CM
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-develop-blue/[0.07] text-develop-blue">
+                <GraduationCap size={22} />
               </div>
               <div>
-                <div className="text-sm font-semibold text-text-primary">Carlos M.</div>
-                <div className="text-xs text-text-muted">Full Stack Developer — Consultora IT</div>
+                <div className="text-sm font-semibold text-text-primary">Talento formado en Develop</div>
+                <div className="text-xs text-text-muted">Testimonio anónimo de la comunidad</div>
               </div>
             </figcaption>
           </motion.figure>

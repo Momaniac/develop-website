@@ -26,18 +26,25 @@ src/
 public/logos/     # Logos y favicon
 ```
 
-## Despliegue (Vercel — recomendado)
+## Despliegue (Render · OnRender)
 
-1. Subir el repositorio a GitHub.
-2. En Vercel: **New Project** → importar el repo. Framework: **Next.js** (autodetectado). No requiere variables de entorno por ahora.
-3. Configurar el dominio `www.develop.com.mx` en Vercel y apuntar el DNS.
+El sitio se despliega en **Render** como **Web Service** (servidor Node), con el dominio
+`www.develop.com.mx` apuntado por DNS.
 
-> Alternativa Onrender: tipo **Web Service**, build `npm install && npm run build`, start `npm run start`.
+1. Servicio tipo **Web Service** conectado al repositorio.
+2. Build command: `npm install && npm run build`
+3. Start command: `npm run start`
+4. **Variables de entorno** (Render → *Environment*):
+   - `OPENAI_API_KEY` — clave de OpenAI para BellA. **Obligatoria** para que el chat responda.
+   - `BELLA_MODEL` — opcional (por defecto `gpt-4o-mini`).
 
-## Pendiente tras el primer deploy
+> BellA usa un Route Handler de servidor (`/api/bella`) que requiere el runtime de Node
+> (`npm run start`), no un export estático. Sin `OPENAI_API_KEY` configurada en Render, el
+> chat responde con un mensaje de "no disponible" (la clave nunca se expone al navegador).
 
+## Pendiente tras el deploy
+
+- **Configurar `OPENAI_API_KEY` en Render** para que BellA funcione en producción.
 - **Activar formularios**: el primer envío de cualquier formulario manda un correo de
   confirmación de FormSubmit a `contacto@develop.com.mx`. Hay que abrirlo y confirmar
   una sola vez para que empiecen a llegar los mensajes.
-- Integrar la IA de **BellA** (función `fetchBellaReply` en `src/components/BellaChat.tsx`).
-- Imagen Open Graph dedicada (1200×630) para vistas previas sociales.

@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     title: "Develop · Talent & Technology",
     description:
       "Formamos a los arquitectos de la era de la IA. 35,000+ talentos certificados y 91% de éxito.",
-    images: [{ url: "/logos/logo-develop.png", alt: "Develop Talent & Technology" }],
+    // La imagen 1200×630 la aporta src/app/opengraph-image.tsx (convención de Next.js).
   },
   twitter: {
     card: "summary_large_image",
     title: "Develop · Talent & Technology",
     description:
       "Formamos a los arquitectos de la era de la IA. 35,000+ talentos certificados y 91% de éxito.",
-    images: ["/logos/logo-develop.png"],
+    // La imagen la aporta src/app/twitter-image.tsx.
   },
   icons: { icon: "/logos/favicon.png" },
   robots: { index: true, follow: true },

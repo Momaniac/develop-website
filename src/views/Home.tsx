@@ -342,19 +342,16 @@ export default function HomePage() {
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {[
               {
-                quote: "Encontré un empleo como supervisor de agentes de IA dos semanas después de certificarme como Lead Orchestrator.",
-                name: "Ana V.",
-                role: "Backend Developer — Fintech",
+                quote: "Fue como la primera puerta al mundo real de la programación. Me enseñaron mucho de lo que involucra trabajar en un ambiente productivo; agarras experiencia en ámbitos que de otra manera no tendrías aún.",
+                theme: "Puerta al mundo profesional",
               },
               {
-                quote: "El programa //TODO Academy fue el punto de inflexión de mi carrera. Pasé de no tener experiencia a trabajar en una empresa multinacional.",
-                name: "Carlos M.",
-                role: "Full Stack Developer — Consultora IT",
+                quote: "El trato es súper cordial y muy cálido. La calidad humana es gratificante: te hace sentir cómodo, te hace sentir que sí puedes. El ambiente te hace sentir como en familia.",
+                theme: "Trato humano y ambiente",
               },
               {
-                quote: "Gracias a Develop, logramos certificar al 99% de nuestro cuerpo docente en tecnologías Java. Un hito sin precedentes.",
-                name: "Dirección General",
-                role: "CONALEP Nacional",
+                quote: "Me animé a tomar un curso de certificación de Java Programmer, me preparé para el examen y lo pasé. Tienes acceso a cursos que cuestan dinero y a nosotros nos dan la oportunidad de tomarlos.",
+                theme: "Aprendizaje y certificaciones",
               },
             ].map((t, i) => (
               <motion.figure
@@ -368,8 +365,8 @@ export default function HomePage() {
                   {t.quote}
                 </blockquote>
                 <figcaption className="mt-6 border-t border-black/[0.04] pt-5">
-                  <div className="text-sm font-semibold text-text-primary">{t.name}</div>
-                  <div className="mt-0.5 text-xs text-text-muted">{t.role}</div>
+                  <div className="text-sm font-semibold text-text-primary">{t.theme}</div>
+                  <div className="mt-0.5 text-xs text-text-muted">Testimonio anónimo · Comunidad Develop</div>
                 </figcaption>
               </motion.figure>
             ))}

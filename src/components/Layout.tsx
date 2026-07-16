@@ -215,6 +215,7 @@ const footerSections = [
       { label: "Nosotros", href: "/nosotros" },
       { label: "Resultados", href: "/resultados" },
       { label: "Blog", href: "/recursos/blog" },
+      { label: "Preguntas frecuentes", href: "/faq" },
       { label: "Contacto", href: "/contacto" },
     ],
   },

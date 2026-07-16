@@ -47,20 +47,25 @@ const SUGGESTIONS = [
 
 /**
  * PUNTO ÚNICO DE INTEGRACIÓN DE IA.
- * Hoy devuelve un mensaje provisional. Al integrar, sustituir por la llamada
- * real al modelo (con RAG sobre el contenido del sitio en tiempo real).
+ * Llama al backend seguro `/api/bella` (Route Handler de servidor). La clave de
+ * OpenAI vive solo en el servidor; aquí solo enviamos el historial (rol+texto) y
+ * recibimos el texto de respuesta de BellA.
  */
-async function fetchBellaReply(_history: ChatMessage[]): Promise<string> {
-  // TODO(IA): conectar con el backend/LLM de BellA.
-  // const res = await fetch("/api/bella", {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/json" },
-  //   body: JSON.stringify({ messages: _history }),
-  // });
-  // const data = await res.json();
-  // return data.reply;
-  await new Promise((r) => setTimeout(r, 900)); // simula latencia
-  return "Estoy en fase de entrenamiento y muy pronto estaré conectada a la IA de Develop para responderte en tiempo real. Mientras tanto, un asesor puede ayudarte: escríbenos a contacto@develop.com.mx o desde la página de Contacto.";
+async function fetchBellaReply(history: ChatMessage[]): Promise<string> {
+  const res = await fetch("/api/bella", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      // Enviamos solo lo necesario: rol y contenido (sin ids internos).
+      messages: history.map((m) => ({ role: m.role, content: m.content })),
+    }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (data && typeof data.reply === "string" && data.reply.trim()) {
+    return data.reply;
+  }
+  // Errores controlados del backend (429/4xx/5xx sin reply) → mensaje seguro.
+  return "Ahora mismo no puedo responder. Inténtalo de nuevo en un momento o escríbenos a contacto@develop.com.mx.";
 }
 
 function genId() {
