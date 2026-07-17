@@ -1,0 +1,9 @@
+{
+  // Tailwind v4 usa @theme, @import "tailwindcss", etc., que el validador de CSS
+  // integrado de VSCode no entiende, y marca como "error" prefijos -webkit-* de
+  // compatibilidad. Son falsos positivos (autoprefixer los resuelve en el build;
+  // tsc/eslint/next build están en verde). Silenciamos la validación CSS integrada.
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
+}
